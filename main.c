@@ -5,15 +5,21 @@
 
 int main(int argc, char *argv[]) {
 	
-	int year;
+	unsigned int x;
+	int n;
 	
-	printf("input the year :");
-	scanf("%i", &year);
+	printf("input the number : ");
+	scanf("%i", &x);
 	
+	for (n=0; x!=0; x>>=1)
+	{
+		if (x & 1)
+		{
+			n++;
+		}
+	}
 	
-	
-	
-	printf("is the year %i the leap year? : %i", year, (year%4==0 && year%100!=0) || year%400==0);
+	printf("The result is : %i\n", n);
 	
 	
 	return 0;
